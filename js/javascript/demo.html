@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>functions</title>
+</head>
+
+<body>
+    <script>
+        function abhi() {
+            console.log("hello world")
+        }
+        abhi();
+
+        console.log(print(5, 8));
+
+        function print(a, b) {
+            return a + b;
+        }
+        var c = function anna() {
+            console.log("hello Anna bond")
+        }
+        c(); //IIf
+        (function(a, b) {
+            console.log(a + b)
+        })(78, 98)
+
+        let animal = {
+            name: "dog",
+            eat(a, b) {
+                console.log(this.name + " eating  " + a + " and " + b)
+
+            }
+        };
+        let human = {
+            name: "abhi"
+        }
+        animal.eat(9, 'boans')
+        animal.eat.apply(human, [10, 'chips'])
+        let d = animal.eat.bind(human)
+        d(4, 'org')
+
+        var f = {
+            a: function() {
+                console.log(this)
+            }
+        }
+        f.a();
+        //arrow function
+
+        function candrive(age) {
+            return age >= 21;
+        }
+        console.log(candrive(22));
+
+
+        class box {
+            constructor(length) {
+                this.length = length;
+            }
+            display() {
+                console.log("constructer is called")
+            }
+        }
+        let as = new box(20);
+        as.display();
+
+
+        function n(age) {
+            if (age < 16) {
+                try {
+                    throw new error("you are under age")
+                } catch (error) {
+                    console.log(error)
+                }
+            } else {
+                console.log("you can vote");
+            }
+
+
+
+        }
+    </script>
+</body>
+
+</html>
